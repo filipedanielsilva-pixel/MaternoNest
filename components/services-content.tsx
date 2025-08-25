@@ -17,26 +17,21 @@ export function ServicesContent() {
       title: t.services.prenatal.title,
       description: t.services.prenatal.description,
       detailed: t.services.prenatal.detailed,
-      features: ["Regular health monitoring", "Nutritional guidance", "Birth plan development", "Cultural sensitivity"],
+      features: t.services.prenatal.features,
     },
     {
       icon: Baby,
       title: t.services.birth.title,
       description: t.services.birth.description,
       detailed: t.services.birth.detailed,
-      features: [
-        "Continuous labor support",
-        "Birth advocacy",
-        "Pain management techniques",
-        "Partner support guidance",
-      ],
+      features: t.services.birth.features,
     },
     {
       icon: Users,
       title: t.services.postnatal.title,
       description: t.services.postnatal.description,
       detailed: t.services.postnatal.detailed,
-      features: ["Breastfeeding support", "Newborn care guidance", "Recovery assistance", "Emotional support"],
+      features: t.services.postnatal.features,
     },
   ]
 
@@ -45,11 +40,8 @@ export function ServicesContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <h1 className="text-4xl lg:text-5xl font-heading font-bold text-foreground">Our Services</h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Comprehensive midwifery care designed specifically for English-speaking families in Porto, combining
-            international best practices with local expertise.
-          </p>
+          <h1 className="text-4xl lg:text-5xl font-heading font-bold text-foreground">{t.servicesPage.title}</h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">{t.servicesPage.subtitle}</p>
         </div>
 
         {/* Services Grid */}
@@ -82,7 +74,7 @@ export function ServicesContent() {
                   </div>
 
                   <Button asChild className="bg-primary hover:bg-primary/90">
-                    <Link href="/contact">Book Consultation</Link>
+                    <Link href="/contact">{t.servicesPage.bookConsultation}</Link>
                   </Button>
                 </div>
 
@@ -100,30 +92,30 @@ export function ServicesContent() {
         {/* Why Choose Us */}
         <div className="mt-20 pt-20 border-t">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground">Why Choose MaternoNest?</h2>
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground">
+              {t.servicesPage.whyChoose.title}
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center">
               <CardHeader>
                 <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
-                <CardTitle>Licensed & Experienced</CardTitle>
+                <CardTitle>{t.servicesPage.whyChoose.licensed.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base">
-                  Over 10 years of midwifery experience with Portuguese and international certifications.
-                </CardDescription>
+                <CardDescription className="text-base">{t.servicesPage.whyChoose.licensed.description}</CardDescription>
               </CardContent>
             </Card>
 
             <Card className="text-center">
               <CardHeader>
                 <Heart className="h-12 w-12 text-primary mx-auto mb-4" />
-                <CardTitle>Bilingual Support</CardTitle>
+                <CardTitle>{t.servicesPage.whyChoose.bilingual.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Fluent in English and Portuguese, ensuring clear communication throughout your journey.
+                  {t.servicesPage.whyChoose.bilingual.description}
                 </CardDescription>
               </CardContent>
             </Card>
@@ -131,12 +123,10 @@ export function ServicesContent() {
             <Card className="text-center">
               <CardHeader>
                 <Clock className="h-12 w-12 text-primary mx-auto mb-4" />
-                <CardTitle>Flexible Care</CardTitle>
+                <CardTitle>{t.servicesPage.whyChoose.flexible.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base">
-                  Personalized care plans that adapt to your schedule, preferences, and cultural needs.
-                </CardDescription>
+                <CardDescription className="text-base">{t.servicesPage.whyChoose.flexible.description}</CardDescription>
               </CardContent>
             </Card>
           </div>

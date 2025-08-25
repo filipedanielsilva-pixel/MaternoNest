@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useLocale } from "@/hooks/use-locale"
 import { translations } from "@/lib/i18n"
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Heart } from "lucide-react"
+import { Phone, Mail, MapPin, Send, CheckCircle, Heart } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 
 export function ContactContent() {
@@ -37,9 +37,24 @@ export function ContactContent() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      // Create mailto link with form data
+      const subject = `New Contact Form Submission - ${formData.service || "General Inquiry"}`
+      const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Service: ${formData.service}
+Due Date: ${formData.dueDate}
+
+Message:
+${formData.message}
+      `.trim()
+
+      const mailtoLink = `mailto:info@maternonest.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+      window.location.href = mailtoLink
+
+      await new Promise((resolve) => setTimeout(resolve, 1000))
 
       toast({
         title: "Message Sent!",
@@ -82,14 +97,14 @@ export function ContactContent() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Heart className="h-5 w-5 text-primary" />
-                  Contact Information
+                  {t.contact.contactInfo}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-medium text-foreground">Phone</p>
+                    <p className="font-medium text-foreground">{t.contact.phone}</p>
                     <p className="text-muted-foreground">{t.contact.info.phone}</p>
                   </div>
                 </div>
@@ -97,7 +112,7 @@ export function ContactContent() {
                 <div className="flex items-start gap-3">
                   <Mail className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-medium text-foreground">Email</p>
+                    <p className="font-medium text-foreground">{t.contact.email}</p>
                     <p className="text-muted-foreground">{t.contact.info.email}</p>
                   </div>
                 </div>
@@ -105,16 +120,8 @@ export function ContactContent() {
                 <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-medium text-foreground">Location</p>
+                    <p className="font-medium text-foreground">{t.contact.location}</p>
                     <p className="text-muted-foreground">{t.contact.info.address}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium text-foreground">Hours</p>
-                    <p className="text-muted-foreground">{t.contact.info.hours}</p>
                   </div>
                 </div>
               </CardContent>
@@ -123,30 +130,34 @@ export function ContactContent() {
             {/* What to Expect */}
             <Card>
               <CardHeader>
-                <CardTitle>What to Expect</CardTitle>
+                <CardTitle>{t.contact.whatToExpect.title}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-medium text-foreground">Quick Response</p>
-                    <p className="text-sm text-muted-foreground">We'll respond within 24 hours</p>
+                    <p className="font-medium text-foreground">{t.contact.whatToExpect.quickResponse.title}</p>
+                    <p className="text-sm text-muted-foreground">{t.contact.whatToExpect.quickResponse.description}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-medium text-foreground">Free Consultation</p>
-                    <p className="text-sm text-muted-foreground">Initial 15-minute phone consultation</p>
+                    <p className="font-medium text-foreground">{t.contact.whatToExpect.freeConsultation.title}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {t.contact.whatToExpect.freeConsultation.description}
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-medium text-foreground">Personalized Care</p>
-                    <p className="text-sm text-muted-foreground">Tailored to your unique needs</p>
+                    <p className="font-medium text-foreground">{t.contact.whatToExpect.personalizedCare.title}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {t.contact.whatToExpect.personalizedCare.description}
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -157,7 +168,7 @@ export function ContactContent() {
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
-                <CardTitle>Send us a Message</CardTitle>
+                <CardTitle>{t.contact.sendMessage}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -263,58 +274,44 @@ export function ContactContent() {
         {/* FAQ Section */}
         <div className="mt-20 pt-20 border-t">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground">Frequently Asked Questions</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Common questions from families considering midwifery care in Porto.
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground">{t.contact.faq.title}</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">{t.contact.faq.subtitle}</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">Do you work with hospitals in Porto?</CardTitle>
+                <CardTitle className="text-lg">{t.contact.faq.q1.question}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Yes, we collaborate with several hospitals and birth centers in Porto, including Hospital da Luz and
-                  CUF Porto. We can support you regardless of where you plan to give birth.
-                </p>
+                <p className="text-muted-foreground">{t.contact.faq.q1.answer}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">What if I don't speak Portuguese?</CardTitle>
+                <CardTitle className="text-lg">{t.contact.faq.q2.question}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  That's exactly why we're here! We provide full bilingual support and can help translate and advocate
-                  for you throughout your pregnancy and birth experience.
-                </p>
+                <p className="text-muted-foreground">{t.contact.faq.q2.answer}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">When should I contact a midwife?</CardTitle>
+                <CardTitle className="text-lg">{t.contact.faq.q3.question}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  The earlier, the better! Many families contact us as soon as they discover they're pregnant, but we
-                  can support you at any stage of your pregnancy journey.
-                </p>
+                <p className="text-muted-foreground">{t.contact.faq.q3.answer}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">Do you accept insurance?</CardTitle>
+                <CardTitle className="text-lg">{t.contact.faq.q4.question}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  We work with several private insurance providers and can help you understand your coverage options. We
-                  also offer flexible payment plans for private pay clients.
-                </p>
+                <p className="text-muted-foreground">{t.contact.faq.q4.answer}</p>
               </CardContent>
             </Card>
           </div>
@@ -323,11 +320,8 @@ export function ContactContent() {
         {/* Emergency Contact */}
         <div className="mt-16 bg-secondary/30 rounded-2xl p-8 text-center">
           <div className="max-w-2xl mx-auto space-y-4">
-            <h2 className="text-2xl font-heading font-bold text-foreground">Need Immediate Support?</h2>
-            <p className="text-muted-foreground">
-              For urgent pregnancy-related concerns, please contact your healthcare provider or emergency services. For
-              non-urgent questions, we typically respond within 24 hours.
-            </p>
+            <h2 className="text-2xl font-heading font-bold text-foreground">{t.contact.emergency.title}</h2>
+            <p className="text-muted-foreground">{t.contact.emergency.description}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="outline" size="lg">
                 Emergency: 112
@@ -335,6 +329,18 @@ export function ContactContent() {
               <Button variant="outline" size="lg">
                 SNS24: 808 24 24 24
               </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Newsletter Signup */}
+        <div className="mt-16 bg-primary/5 rounded-2xl p-8 lg:p-12 text-center">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <h2 className="text-3xl font-heading font-bold text-foreground">{t.newsletter.title}</h2>
+            <p className="text-lg text-muted-foreground">{t.newsletter.description}</p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <Input placeholder={t.newsletter.placeholder} className="flex-1" />
+              <Button className="bg-primary hover:bg-primary/90">{t.newsletter.subscribe}</Button>
             </div>
           </div>
         </div>
