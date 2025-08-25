@@ -135,13 +135,13 @@ export function BirthServiceContent() {
               <CardContent>
                 <p className="text-muted-foreground mb-4">
                   {locale === "en"
-                    ? "Medical support available with personalized midwifery care"
-                    : "Apoio médico disponível com cuidados de obstetrícia personalizados"}
+                    ? "Professional midwifery support within hospital settings"
+                    : "Apoio profissional de obstetrícia em ambiente hospitalar"}
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• {locale === "en" ? "Medical backup" : "Apoio médico"}</li>
-                  <li>• {locale === "en" ? "Pain relief options" : "Opções de alívio da dor"}</li>
-                  <li>• {locale === "en" ? "Emergency care" : "Cuidados de emergência"}</li>
+                  <li>• {locale === "en" ? "Continuous advocacy" : "Advocacia contínua"}</li>
+                  <li>• {locale === "en" ? "Pain relief guidance" : "Orientação sobre alívio da dor"}</li>
+                  <li>• {locale === "en" ? "Professional support" : "Apoio profissional"}</li>
                 </ul>
               </CardContent>
             </Card>
@@ -156,13 +156,13 @@ export function BirthServiceContent() {
               <CardContent>
                 <p className="text-muted-foreground mb-4">
                   {locale === "en"
-                    ? "Home-like environment with medical facilities nearby"
-                    : "Ambiente semelhante a casa com instalações médicas próximas"}
+                    ? "Home-like environment with professional midwifery care"
+                    : "Ambiente semelhante a casa com cuidados profissionais de obstetrícia"}
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>• {locale === "en" ? "Comfortable setting" : "Ambiente confortável"}</li>
                   <li>• {locale === "en" ? "Natural birth focus" : "Foco no parto natural"}</li>
-                  <li>• {locale === "en" ? "Quick medical access" : "Acesso médico rápido"}</li>
+                  <li>• {locale === "en" ? "Personalized care" : "Cuidados personalizados"}</li>
                 </ul>
               </CardContent>
             </Card>

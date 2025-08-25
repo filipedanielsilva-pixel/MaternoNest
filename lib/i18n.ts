@@ -237,9 +237,9 @@ export const translations = {
             "The earlier, the better! Many families contact us as soon as they discover they're pregnant, but we can support you at any stage of your pregnancy journey.",
         },
         q4: {
-          question: "Do you accept insurance?",
+          question: "Do you offer virtual consultations?",
           answer:
-            "We work with several private insurance providers and can help you understand your coverage options. We also offer flexible payment plans for private pay clients.",
+            "Yes! We provide comprehensive virtual consultations for families throughout Portugal. This allows us to support you regardless of your location, with follow-up care and guidance available online.",
         },
       },
       emergency: {
@@ -496,9 +496,9 @@ export const translations = {
             "Quanto mais cedo, melhor! Muitas famílias contactam-nos assim que descobrem que estão grávidas, mas podemos apoiá-la em qualquer fase da sua jornada de gravidez.",
         },
         q4: {
-          question: "Aceitam seguros?",
+          question: "Oferecem consultas virtuais?",
           answer:
-            "Trabalhamos com vários fornecedores de seguros privados e podemos ajudá-la a compreender as suas opções de cobertura. Também oferecemos planos de pagamento flexíveis para clientes particulares.",
+            "Sim! Fornecemos consultas virtuais abrangentes para famílias em todo o Portugal. Isto permite-nos apoiá-la independentemente da sua localização, com cuidados de acompanhamento e orientação disponíveis online.",
         },
       },
       emergency: {
