@@ -84,7 +84,7 @@ export function PrenatalServiceContent() {
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden bg-secondary/50">
               <img
-                src="/prenatal-care-consultation.png"
+                src="/prenatal-care-detailed.png"
                 alt="Prenatal care consultation"
                 className="w-full h-full object-cover"
               />

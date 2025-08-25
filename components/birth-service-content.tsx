@@ -31,7 +31,7 @@ export function BirthServiceContent() {
           <div className="relative order-first lg:order-first">
             <div className="aspect-square rounded-2xl overflow-hidden bg-secondary/50">
               <img
-                src="/birth-support-midwife.png"
+                src="/birth-support-detailed.png"
                 alt="Birth support with midwife"
                 className="w-full h-full object-cover"
               />

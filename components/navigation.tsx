@@ -40,9 +40,6 @@ export function Navigation() {
             <Link href="/services" className="text-foreground hover:text-primary transition-colors font-medium">
               {t.nav.services}
             </Link>
-            <Link href="/blog" className="text-foreground hover:text-primary transition-colors font-medium">
-              {t.nav.blog}
-            </Link>
             <Link href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
               {t.nav.contact}
             </Link>
@@ -116,13 +113,6 @@ export function Navigation() {
                 onClick={() => setIsOpen(false)}
               >
                 {t.nav.services}
-              </Link>
-              <Link
-                href="/blog"
-                className="text-foreground hover:text-primary transition-colors py-3 px-2 font-medium min-h-[44px] flex items-center"
-                onClick={() => setIsOpen(false)}
-              >
-                {t.nav.blog}
               </Link>
               <Link
                 href="/contact"
