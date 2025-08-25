@@ -19,6 +19,7 @@ export function useLocale() {
   const changeLocale = (newLocale: Locale) => {
     setLocale(newLocale)
     localStorage.setItem("locale", newLocale)
+    window.location.reload()
   }
 
   return { locale, changeLocale }

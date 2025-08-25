@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { useLocale } from "@/hooks/use-locale"
 import { translations } from "@/lib/i18n"
 import Link from "next/link"
-import { Baby, Heart, Users, CheckCircle, Clock, Shield } from "lucide-react"
+import { Baby, Heart, Users, CheckCircle, Clock, Shield, ArrowRight } from "lucide-react"
 
 export function ServicesContent() {
   const { locale } = useLocale()
@@ -18,6 +18,7 @@ export function ServicesContent() {
       description: t.services.prenatal.description,
       detailed: t.services.prenatal.detailed,
       features: t.services.prenatal.features,
+      href: "/services/prenatal",
     },
     {
       icon: Baby,
@@ -25,6 +26,7 @@ export function ServicesContent() {
       description: t.services.birth.description,
       detailed: t.services.birth.detailed,
       features: t.services.birth.features,
+      href: "/services/birth",
     },
     {
       icon: Users,
@@ -32,6 +34,7 @@ export function ServicesContent() {
       description: t.services.postnatal.description,
       detailed: t.services.postnatal.detailed,
       features: t.services.postnatal.features,
+      href: "/services/postnatal",
     },
   ]
 
@@ -73,9 +76,17 @@ export function ServicesContent() {
                     ))}
                   </div>
 
-                  <Button asChild className="bg-primary hover:bg-primary/90">
-                    <Link href="/contact">{t.servicesPage.bookConsultation}</Link>
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button asChild className="bg-primary hover:bg-primary/90">
+                      <Link href="/contact">{t.servicesPage.bookConsultation}</Link>
+                    </Button>
+                    <Button asChild variant="outline">
+                      <Link href={service.href} className="flex items-center gap-2">
+                        {t.servicesSection.learnMore}
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
 
                 {/* Image */}

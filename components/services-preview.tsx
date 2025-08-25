@@ -16,19 +16,19 @@ export function ServicesPreview() {
       icon: Heart,
       title: t.services.prenatal.title,
       description: t.services.prenatal.description,
-      href: "/services",
+      href: "/services/prenatal",
     },
     {
       icon: Baby,
       title: t.services.birth.title,
       description: t.services.birth.description,
-      href: "/services",
+      href: "/services/birth",
     },
     {
       icon: Users,
       title: t.services.postnatal.title,
       description: t.services.postnatal.description,
-      href: "/services",
+      href: "/services/postnatal",
     },
   ]
 

@@ -180,7 +180,7 @@ ${formData.message}
                         value={formData.name}
                         onChange={(e) => handleInputChange("name", e.target.value)}
                         required
-                        placeholder="Your full name"
+                        placeholder={t.contact.form.namePlaceholder}
                       />
                     </div>
 
@@ -192,7 +192,7 @@ ${formData.message}
                         value={formData.email}
                         onChange={(e) => handleInputChange("email", e.target.value)}
                         required
-                        placeholder="your.email@example.com"
+                        placeholder={t.contact.form.emailPlaceholder}
                       />
                     </div>
                   </div>
@@ -205,7 +205,7 @@ ${formData.message}
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleInputChange("phone", e.target.value)}
-                        placeholder="+351 XXX XXX XXX"
+                        placeholder={t.contact.form.phonePlaceholder}
                       />
                     </div>
 
@@ -213,7 +213,7 @@ ${formData.message}
                       <Label htmlFor="service">{t.contact.form.service} *</Label>
                       <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)}>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a service" />
+                          <SelectValue placeholder={t.contact.form.servicePlaceholder} />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="consultation">{t.contact.services.consultation}</SelectItem>
@@ -243,7 +243,7 @@ ${formData.message}
                       onChange={(e) => handleInputChange("message", e.target.value)}
                       required
                       rows={5}
-                      placeholder="Tell us about your needs, questions, or how we can support you..."
+                      placeholder={t.contact.form.messagePlaceholder}
                     />
                   </div>
 
@@ -323,12 +323,12 @@ ${formData.message}
             <h2 className="text-2xl font-heading font-bold text-foreground">{t.contact.emergency.title}</h2>
             <p className="text-muted-foreground">{t.contact.emergency.description}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="outline" size="lg">
+              <div className="px-6 py-3 border border-border rounded-lg bg-background text-foreground font-medium">
                 Emergency: 112
-              </Button>
-              <Button variant="outline" size="lg">
+              </div>
+              <div className="px-6 py-3 border border-border rounded-lg bg-background text-foreground font-medium">
                 SNS24: 808 24 24 24
-              </Button>
+              </div>
             </div>
           </div>
         </div>

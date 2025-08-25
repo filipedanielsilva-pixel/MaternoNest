@@ -14,7 +14,7 @@ export const translations = {
       connect: "Connect",
     },
     hero: {
-      title: "Embrace Your Journey: Compassionate Midwifery Care in Porto",
+      title: "Embrace Your Journey: Compassionate Midwifery Care in Portugal",
       subtitle: "Supporting Expectant Mothers Every Step of the Way",
       cta: "Book Consultation",
     },
@@ -65,7 +65,7 @@ export const translations = {
     servicesPage: {
       title: "Our Services",
       subtitle:
-        "Comprehensive midwifery care designed specifically for English-speaking families in Porto, combining international best practices with local expertise.",
+        "Comprehensive midwifery care designed specifically for English-speaking families in Portugal, combining international best practices with local expertise.",
       bookConsultation: "Book Consultation",
       whyChoose: {
         title: "Why Choose MaternoNest?",
@@ -86,7 +86,7 @@ export const translations = {
     blog: {
       title: "Pregnancy & Birth Blog",
       subtitle:
-        "Expert insights, practical tips, and guidance for your pregnancy journey in Porto. Written specifically for English-speaking families navigating Portuguese healthcare.",
+        "Expert insights, practical tips, and guidance for your pregnancy journey in Portugal. Written specifically for English-speaking families navigating Portuguese healthcare.",
       searchPlaceholder: "Search articles...",
       allArticles: "All Articles",
       featuredArticle: "Featured Article",
@@ -159,12 +159,12 @@ export const translations = {
       },
       facebook: {
         title: "Facebook",
-        description: "Join our supportive community of English-speaking families in Porto.",
+        description: "Join our supportive community of English-speaking families in Portugal.",
       },
       newsletter: {
         title: "Stay Connected",
         description:
-          "Get weekly pregnancy tips, local Porto resources, and updates from our practice delivered to your inbox.",
+          "Get weekly pregnancy tips, local Portuguese resources, and updates from our practice delivered to your inbox.",
         placeholder: "Enter your email address",
         button: "Subscribe",
       },
@@ -194,11 +194,16 @@ export const translations = {
       sendMessage: "Send us a Message",
       form: {
         name: "Full Name",
+        namePlaceholder: "Your full name",
         email: "Email Address",
+        emailPlaceholder: "your.email@example.com",
         phone: "Phone Number",
+        phonePlaceholder: "+351 XXX XXX XXX",
         service: "Service Interested In",
+        servicePlaceholder: "Select a service",
         dueDate: "Expected Due Date",
         message: "Message",
+        messagePlaceholder: "Tell us about your needs, questions, or how we can support you...",
         submit: "Send Message",
         sending: "Sending...",
       },
@@ -262,7 +267,7 @@ export const translations = {
       connect: "Conectar",
     },
     hero: {
-      title: "Abrace a Sua Jornada: Cuidados de Obstetrícia Compassivos no Porto",
+      title: "Abrace a Sua Jornada: Cuidados de Obstetrícia Compassivos em Portugal",
       subtitle: "Apoiando Futuras Mães em Cada Passo do Caminho",
       cta: "Marcar Consulta",
     },
@@ -318,7 +323,7 @@ export const translations = {
     servicesPage: {
       title: "Os Nossos Serviços",
       subtitle:
-        "Cuidados de obstetrícia abrangentes concebidos especificamente para famílias anglófonas no Porto, combinando as melhores práticas internacionais com experiência local.",
+        "Cuidados de obstetrícia abrangentes concebidos especificamente para famílias anglófonas em Portugal, combinando as melhores práticas internacionais com experiência local.",
       bookConsultation: "Marcar Consulta",
       whyChoose: {
         title: "Porquê Escolher a MaternoNest?",
@@ -340,7 +345,7 @@ export const translations = {
     blog: {
       title: "Blogue de Gravidez e Parto",
       subtitle:
-        "Conhecimentos especializados, dicas práticas e orientação para a sua jornada de gravidez no Porto. Escrito especificamente para famílias anglófonas que navegam nos cuidados de saúde portugueses.",
+        "Conhecimentos especializados, dicas práticas e orientação para a sua jornada de gravidez em Portugal. Escrito especificamente para famílias anglófonas que navegam nos cuidados de saúde portugueses.",
       searchPlaceholder: "Pesquisar artigos...",
       allArticles: "Todos os Artigos",
       featuredArticle: "Artigo em Destaque",
@@ -413,12 +418,12 @@ export const translations = {
       },
       facebook: {
         title: "Facebook",
-        description: "Junte-se à nossa comunidade de apoio de famílias anglófonas no Porto.",
+        description: "Junte-se à nossa comunidade de apoio de famílias anglófonas em Portugal.",
       },
       newsletter: {
         title: "Mantenha-se Conectada",
         description:
-          "Receba dicas semanais de gravidez, recursos locais do Porto e actualizações da nossa prática na sua caixa de correio electrónico.",
+          "Receba dicas semanais de gravidez, recursos locais portugueses e actualizações da nossa prática na sua caixa de correio electrónico.",
         placeholder: "Insira o seu endereço de correio electrónico",
         button: "Subscrever",
       },
@@ -448,11 +453,16 @@ export const translations = {
       sendMessage: "Envie-nos uma Mensagem",
       form: {
         name: "Nome Completo",
+        namePlaceholder: "O seu nome completo",
         email: "Endereço de Correio Electrónico",
+        emailPlaceholder: "o.seu.email@exemplo.com",
         phone: "Número de Telefone",
+        phonePlaceholder: "+351 XXX XXX XXX",
         service: "Serviço de Interesse",
+        servicePlaceholder: "Seleccione um serviço",
         dueDate: "Data Prevista do Parto",
         message: "Mensagem",
+        messagePlaceholder: "Conte-nos sobre as suas necessidades, questões, ou como a podemos apoiar...",
         submit: "Enviar Mensagem",
         sending: "A enviar...",
       },
