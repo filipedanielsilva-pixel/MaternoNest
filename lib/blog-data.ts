@@ -14,20 +14,20 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "1",
-    slug: "preparing-for-birth-in-porto",
-    title: "Preparing for Birth in Porto: A Guide for Expat Families",
+    slug: "preparing-for-birth-in-portugal",
+    title: "Preparing for Birth in Portugal: A Guide for Expat Families",
     excerpt:
-      "Essential information about birthing options, hospital systems, and cultural considerations for international families in Porto.",
+      "Essential information about birthing options, hospital systems, and cultural considerations for international families in Portugal.",
     content: `
-# Preparing for Birth in Porto: A Guide for Expat Families
+# Preparing for Birth in Portugal: A Guide for Expat Families
 
-Moving to a new country during pregnancy can feel overwhelming, especially when navigating a different healthcare system. As an English-speaking family in Porto, you have several excellent options for your birth experience.
+Moving to a new country during pregnancy can feel overwhelming, especially when navigating a different healthcare system. As an English-speaking family in Portugal, you have several excellent options for your birth experience.
 
 ## Understanding the Portuguese Healthcare System
 
 Portugal has both public (SNS) and private healthcare systems. The public system provides excellent maternity care, while private options offer more personalized service and often better English-language support.
 
-### Public Hospitals in Porto
+### Public Hospitals in Portugal
 - **Centro Hospitalar Universitário de São João** - Large teaching hospital with modern facilities
 - **Centro Hospitalar do Porto** - Multiple locations with comprehensive maternity services
 
@@ -59,23 +59,23 @@ Having a bilingual midwife can bridge cultural and language gaps, ensuring you f
   },
   {
     id: "2",
-    slug: "breastfeeding-support-porto",
-    title: "Breastfeeding Support Resources in Porto",
+    slug: "breastfeeding-support-Portugal",
+    title: "Breastfeeding Support Resources in Portugal",
     excerpt:
-      "Comprehensive guide to lactation support, breastfeeding groups, and resources available for new mothers in Porto.",
+      "Comprehensive guide to lactation support, breastfeeding groups, and resources available for new mothers in Portugal.",
     content: `
-# Breastfeeding Support Resources in Porto
+# Breastfeeding Support Resources in Portugal
 
-Starting your breastfeeding journey in a new country can feel challenging. Porto offers excellent resources for nursing mothers, and knowing where to find support can make all the difference.
+Starting your breastfeeding journey in a new country can feel challenging. Portugal offers excellent resources for nursing mothers, and knowing where to find support can make all the difference.
 
 ## Professional Lactation Support
 
 ### Certified Lactation Consultants
-- International Board Certified Lactation Consultants (IBCLCs) available in Porto
+- International Board Certified Lactation Consultants (IBCLCs) available in Portugal
 - Many speak English and understand international perspectives on breastfeeding
 
 ### Hospital Support
-Most Porto hospitals have lactation consultants on staff who can help with:
+Most Portugal hospitals have lactation consultants on staff who can help with:
 - Initial latch and positioning
 - Addressing early challenges
 - Pumping guidance for working mothers
@@ -83,8 +83,8 @@ Most Porto hospitals have lactation consultants on staff who can help with:
 ## Community Support Groups
 
 ### English-Speaking Groups
-- **Porto Mums** - Active Facebook group with regular meetups
-- **International Women of Porto** - Includes breastfeeding support circle
+- **Portugal Mums** - Active Facebook group with regular meetups
+- **International Women of Portugal** - Includes breastfeeding support circle
 - **La Leche League Portugal** - Some meetings conducted in English
 
 ### Portuguese Groups
@@ -94,11 +94,11 @@ Most Porto hospitals have lactation consultants on staff who can help with:
 
 ### Where to Buy Supplies
 - **Farmácias** - All carry basic breastfeeding supplies
-- **Chicco stores** - Multiple locations in Porto
+- **Chicco stores** - Multiple locations in Portugal
 - **Online options** - Amazon.es delivers to Portugal
 
 ### Breastfeeding-Friendly Spaces
-Porto is generally breastfeeding-friendly, with most cafés and public spaces welcoming nursing mothers.
+Portugal is generally breastfeeding-friendly, with most cafés and public spaces welcoming nursing mothers.
 
 ## Common Challenges and Solutions
 
@@ -148,7 +148,7 @@ Portugal's coastline provides excellent sources of:
 ## Navigating Portuguese Markets
 
 ### Mercado do Bolhão
-Porto's historic market offers:
+Portugal's historic market offers:
 - Fresh, seasonal produce
 - Local specialties
 - Opportunity to practice Portuguese
