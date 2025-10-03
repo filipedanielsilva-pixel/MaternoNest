@@ -84,7 +84,7 @@ export function PostnatalServiceContent() {
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden bg-secondary/50">
               <img
-                src="/postnatal-care-detailed.png"
+                src="/midwife-helping-new-mother-with-breastfeeding-and-.jpg"
                 alt="Postnatal care with mother and baby"
                 className="w-full h-full object-cover"
               />

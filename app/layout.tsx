@@ -18,7 +18,7 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "MaternoNest - Compassionate Midwifery Care in Porto",
   description:
-    "Professional midwifery services for English-speaking expats in Porto. Prenatal care, birth support, and postnatal care with bilingual support. Love, care, and support for your pregnancy journey.",
+    "Supporting Expectant Mothers Every Step of the Way. Embrace Your Journey with compassionate midwifery care in Portugal. Prenatal care, birth support, and postnatal care with bilingual support.",
   keywords: [
     "midwife Porto",
     "pregnancy care Porto",
@@ -47,10 +47,17 @@ export const metadata: Metadata = {
       "pt-PT": "/pt",
     },
   },
+  icons: {
+    icon: [
+      { url: "/maternonest-logo.jpg", sizes: "any" },
+      { url: "/maternonest-logo.jpg", type: "image/jpeg" },
+    ],
+    apple: [{ url: "/maternonest-logo.jpg" }],
+  },
   openGraph: {
     title: "MaternoNest - Compassionate Midwifery Care in Porto",
     description:
-      "Professional midwifery services for English-speaking expats in Porto. Prenatal care, birth support, and postnatal care with bilingual support.",
+      "Supporting Expectant Mothers Every Step of the Way. Embrace Your Journey with compassionate midwifery care in Portugal.",
     url: "https://maternonest.com",
     siteName: "MaternoNest",
     images: [
@@ -68,7 +75,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MaternoNest - Compassionate Midwifery Care in Porto",
     description:
-      "Professional midwifery services for English-speaking expats in Porto. Prenatal care, birth support, and postnatal care.",
+      "Supporting Expectant Mothers Every Step of the Way. Compassionate midwifery care in Portugal with bilingual support.",
     images: ["/maternonest-logo.jpg"],
   },
   robots: {
