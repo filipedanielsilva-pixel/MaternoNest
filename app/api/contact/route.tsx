@@ -5,22 +5,6 @@ export async function POST(request: Request) {
     const body = await request.json()
     const { name, email, phone, service, dueDate, message } = body
 
-    // Create email content
-    const emailContent = `
-New Contact Form Submission from MaternoNest
-
-Name: ${name}
-Email: ${email}
-Phone: ${phone || "Not provided"}
-Service: ${service}
-Due Date: ${dueDate || "Not provided"}
-
-Message:
-${message}
-    `.trim()
-
-    // Send email using mailto (this will be handled by the server)
-    // In a production environment, you would use a service like SendGrid, Resend, or Nodemailer
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -28,10 +12,10 @@ ${message}
         Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "MaternoNest <noreply@maternonest.com>",
-        to: ["info@maternonest.com"],
+        from: "MaternoNest <onboarding@resend.dev>",
+        to: ["delivered@resend.dev"],
+        reply_to: email,
         subject: `New Contact Form Submission - ${service}`,
-        text: emailContent,
         html: `
           <h2>New Contact Form Submission from MaternoNest</h2>
           <p><strong>Name:</strong> ${name}</p>
@@ -46,6 +30,8 @@ ${message}
     })
 
     if (!response.ok) {
+      const errorData = await response.json()
+      console.error("Resend API error:", errorData)
       throw new Error("Failed to send email")
     }
 

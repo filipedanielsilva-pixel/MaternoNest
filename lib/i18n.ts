@@ -267,7 +267,7 @@ export const translations = {
       connect: "Conectar",
     },
     hero: {
-      title: "Abrace a Sua Jornada: Cuidados de Obstetrícia Compassivos em Portugal",
+      title: "Abrace a Sua Jornada: Cuidados de Obstetrícia Holísticos em Portugal",
       subtitle: "Apoiando Mães e Familias em Cada Passo do Caminho",
       cta: "Marcar Consulta",
     },
