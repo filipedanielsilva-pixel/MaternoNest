@@ -13,7 +13,7 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({
         from: "MaternoNest <onboarding@resend.dev>",
-        to: ["delivered@resend.dev"],
+        to: ["info@maternonest.com"],
         reply_to: email,
         subject: `New Contact Form Submission - ${service}`,
         html: `

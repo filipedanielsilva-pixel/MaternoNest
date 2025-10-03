@@ -132,23 +132,19 @@ export function ConnectContent() {
           </div>
         </div>
 
-        {/* Instagram Feed Simulation */}
+        {/* Instagram Feed Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Latest from Instagram</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-              <div
-                key={i}
-                className="aspect-square bg-gradient-to-br from-muted to-muted/50 rounded-lg flex items-center justify-center hover:scale-105 transition-transform cursor-pointer"
-              >
-                <Instagram className="h-8 w-8 text-muted-foreground" />
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-6">
-            <Button asChild variant="outline">
-              <a href="https://www.instagram.com/stories/thematernonest/" target="_blank" rel="noopener noreferrer">
-                View More on Instagram
+          <h2 className="text-3xl font-bold text-center mb-4">Latest from Instagram</h2>
+          <p className="text-center text-muted-foreground mb-8">
+            {locale === "en"
+              ? "Follow us on Instagram to see our latest posts, tips, and community updates!"
+              : "Siga-nos no Instagram para ver as nossas últimas publicações, dicas e atualizações da comunidade!"}
+          </p>
+          <div className="text-center">
+            <Button asChild size="lg">
+              <a href="https://www.instagram.com/thematernonest/" target="_blank" rel="noopener noreferrer">
+                <Instagram className="h-5 w-5 mr-2" />
+                View Our Instagram Feed
               </a>
             </Button>
           </div>
