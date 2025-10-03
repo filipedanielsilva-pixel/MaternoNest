@@ -15,7 +15,7 @@ export const translations = {
     },
     hero: {
       title: "Embrace Your Journey: Compassionate Midwifery Care in Portugal",
-      subtitle: "Supporting Expectant Mothers Every Step of the Way",
+      subtitle: "Supporting Mothers and Families Every Step of the Way",
       cta: "Book Consultation",
     },
     trustIndicators: {
@@ -268,7 +268,7 @@ export const translations = {
     },
     hero: {
       title: "Abrace a Sua Jornada: Cuidados de Obstetrícia Compassivos em Portugal",
-      subtitle: "Apoiando Futuras Mães em Cada Passo do Caminho",
+      subtitle: "Apoiando Mães e Familias em Cada Passo do Caminho",
       cta: "Marcar Consulta",
     },
     trustIndicators: {
